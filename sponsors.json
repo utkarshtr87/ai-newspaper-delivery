@@ -1,14 +1,1 @@
-{
-  "gold_sponsors": [
-    { "name": "Gold Sponsor 1", "logo_url": "https://via.placeholder.com/300x100.png?text=Premium+Brand+1" },
-    { "name": "Gold Sponsor 2", "logo_url": "https://via.placeholder.com/300x100.png?text=Premium+Brand+2" }
-  ],
-  "silver_sponsors": [
-    { "name": "Silver Sponsor 1", "logo_url": "https://via.placeholder.com/150x50.png?text=Brand+A" },
-    { "name": "Silver Sponsor 2", "logo_url": "https://via.placeholder.com/150x50.png?text=Brand+B" },
-    { "name": "Silver Sponsor 3", "logo_url": "https://via.placeholder.com/150x50.png?text=Brand+C" },
-    { "name": "Silver Sponsor 4", "logo_url": "https://via.placeholder.com/150x50.png?text=Brand+D" },
-    { "name": "Silver Sponsor 5", "logo_url": "https://via.placeholder.com/150x50.png?text=Brand+E" },
-    { "name": "Silver Sponsor 6", "logo_url": "https://via.placeholder.com/150x50.png?text=Brand+F" }
-  ]
-}
+
