@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF--8">
+    <title>Unmasked India</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@600&family=Poppins:wght@400;700&family=Noto+Sans+Devanagari:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="front-page">
+        <div class="sponsors-top">
+            <p>Our Premium Partners</p>
+            <div class="sponsor-grid-gold">
+                {{ gold_sponsors_html }}
+            </div>
+        </div>
+
+        <div class="main-title">
+            <h1>Unmasked India</h1>
+            <h2>{{ today_date }}</h2>
+        </div>
+
+        <div class="sponsors-bottom">
+             <p>Supported By</p>
+            <div class="sponsor-grid-silver">
+                {{ silver_sponsors_html }}
+            </div>
+        </div>
+    </div>
+
+    <main class="news-section">
+        {{ articles_html }}
+    </main>
+
+    <footer>
+        Page <span class="page-number"></span> | Unmasked India
+    </footer>
+</body>
+</html>

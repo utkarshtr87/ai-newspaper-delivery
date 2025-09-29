@@ -1,0 +1,133 @@
+/* Using Google Fonts imported in HTML */
+/* 'Teko' for Headlines, 'Poppins' for English Body, 'Noto Sans Devanagari' for Hindi Body */
+
+@page {
+    size: A4;
+    margin: 1.5cm;
+}
+
+/* Rule for the front page to have no content from main news */
+@page :first {
+    /* You can add specific styles for the first page here if needed */
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #212121;
+}
+
+body.lang-hi { 
+    font-family: 'Noto Sans Devanagari', sans-serif; 
+}
+
+/* --- Front Page Styles --- */
+.front-page {
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.sponsors-top p, .sponsors-bottom p {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Style for 2 Gold Sponsors */
+.sponsor-grid-gold {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 30px;
+    align-items: center;
+    padding: 0 2cm; /* Add some padding to not touch the edges */
+}
+
+/* Style for 6 Silver Sponsors */
+.sponsor-grid-silver {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columns */
+    gap: 15px;
+    row-gap: 25px;
+    align-items: center;
+}
+
+.sponsor-grid-gold img, .sponsor-grid-silver img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(80%);
+    opacity: 0.7;
+}
+
+.main-title h1 {
+    font-family: 'Teko', sans-serif;
+    font-size: 84px;
+    font-weight: 600;
+    margin: 0;
+    color: #111;
+    letter-spacing: 1px;
+}
+
+.main-title h2 { 
+    font-size: 16px; 
+    color: #555; 
+    margin-top: -10px; 
+    font-weight: 400; 
+}
+
+
+/* --- News Section Styles (Starts from Page 2) --- */
+.news-section {
+    page-break-before: always; /* This is the magic line that pushes news to the next page */
+    column-count: 3;
+    column-gap: 15px;
+    column-rule: 1px solid #eeeeee;
+}
+
+article {
+    break-inside: avoid-column;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: 15px;
+}
+
+article h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+}
+body.lang-hi article h3 { 
+    font-family: 'Noto Sans Devanagari', sans-serif; 
+}
+
+article p { 
+    font-size: 11px; 
+    line-height: 1.7; 
+    text-align: justify; 
+}
+
+.manthan-point {
+    font-style: italic;
+    color: #d32f2f;
+    border-left: 3px solid #d32f2f;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+/* --- Footer --- */
+footer { 
+    position: fixed; 
+    bottom: -40px; 
+    left: 0; 
+    right: 0; 
+    text-align: center; 
+    font-size: 10px; 
+    color: #777; 
+}
+.page-number::after { 
+    content: counter(page); 
+}
